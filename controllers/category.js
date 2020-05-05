@@ -46,7 +46,7 @@ exports.updateCategory = (req, res) => {
   category.save((err, updatedCategory) => {
     if (err) {
       return res.status(400).json({
-        error: "Failed to update category"
+        error: err
       });
     }
     res.json(updatedCategory);
@@ -63,7 +63,7 @@ exports.removeCategory = (req, res) => {
       });
     }
     res.json({
-      message: "Successfully deleted"
+      message: "Successfull deleted"
     });
   });
 };

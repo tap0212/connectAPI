@@ -9,7 +9,7 @@ const cookieParser  = require("cookie-parser")
 const cors = require("cors")
 
 //routes
-const authRoutes = require("./routes/authentication")
+const authRoutes = require("./routes/auth")
 const userRoutes = require('./routes/user')
 const categoryRoutes = require('./routes/category')
 const eventRoutes = require('./routes/event')
