@@ -3,6 +3,11 @@ const {ObjectId} = mongoose.Schema;
 
 var eventSchema = new mongoose.Schema(
   {
+    User:{
+        type:ObjectId,
+        ref:"User",
+        required:true
+    },
     title:{
         type:String,
         trim:true,
