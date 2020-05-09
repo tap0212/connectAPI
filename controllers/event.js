@@ -28,9 +28,9 @@ exports.createEvent = (req, res) => {
       });
     }
     //destructure the fields
-    const { title, expiry, description,category,User, link, phone, venue, longitude, latitude } = fields;
+    const { title, expiry, description,category,name, link, phone, venue, longitude, latitude } = fields;
 
-    if (!User || !title || !description || !phone || !category ) {
+    if (!name || !title || !description || !phone || !category ) {
       return res.status(400).json({
         error: "Please include all fields"
       });
@@ -54,7 +54,7 @@ exports.createEvent = (req, res) => {
     product.save((err, product) => {
       if (err) {
         res.status(400).json({
-          error: "Saving tshirt in DB failed"
+          error: err
         });
       }
       res.json(product);
