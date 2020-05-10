@@ -48,6 +48,11 @@ var eventSchema = new mongoose.Schema(
         ref: "Category",
         required: true
     },
+    user:{
+        type:ObjectId,
+        ref:"User",
+        required:true
+    }
   },
   { timestamps: true }
 );

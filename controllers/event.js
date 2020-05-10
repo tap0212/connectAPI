@@ -28,7 +28,7 @@ exports.createEvent = (req, res) => {
       });
     }
     //destructure the fields
-    const { title, expiry, description,category,name, link, phone, venue, longitude, latitude } = fields;
+    const { title, expiry, description,category,user,name, link, phone, venue, longitude, latitude } = fields;
 
     if (!name || !title || !description || !phone || !category ) {
       return res.status(400).json({
