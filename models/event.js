@@ -48,7 +48,7 @@ var eventSchema = new mongoose.Schema(
         ref: "Category",
         required: true
     },
-    user:{
+    person:{
         type:ObjectId,
         ref:"User",
         required:true
