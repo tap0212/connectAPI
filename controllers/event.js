@@ -30,7 +30,7 @@ exports.createEvent = (req, res) => {
     //destructure the fields
     const { title, expiry, description,category,person,name, link, phone, venue, longitude, latitude } = fields;
 
-    if (!name || !title || !description || !phone || !category ) {
+    if ( !title || !description || !phone || !category ) {
       return res.status(400).json({
         error: "Please include all fields"
       });

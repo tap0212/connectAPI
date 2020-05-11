@@ -5,7 +5,6 @@ var eventSchema = new mongoose.Schema(
   {
     name:{
         type:String,
-        required:true
     },
     title:{
         type:String,
@@ -49,8 +48,10 @@ var eventSchema = new mongoose.Schema(
         required: true
     },
     person:{
-        type:String,
-    }
+        type:ObjectId,
+        ref:"User"
+    },
+    location:Object
   },
   { timestamps: true }
 );
