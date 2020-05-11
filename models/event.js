@@ -49,8 +49,7 @@ var eventSchema = new mongoose.Schema(
         required: true
     },
     person:{
-        type:ObjectId,
-        ref:"User"
+        type:String,
     }
   },
   { timestamps: true }
