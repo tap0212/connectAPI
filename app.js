@@ -13,6 +13,7 @@ const authRoutes = require("./routes/auth")
 const userRoutes = require('./routes/user')
 const categoryRoutes = require('./routes/category')
 const eventRoutes = require('./routes/event')
+const locationRoutes = require('./routes/location')
 //DB connection
 mongoose
     .connect(
@@ -36,6 +37,7 @@ app.use("/api",authRoutes);
 app.use("/api",userRoutes);
 app.use('/api',categoryRoutes)
 app.use('/api',eventRoutes)
+app.use("/api", locationRoutes)
 
 
 
