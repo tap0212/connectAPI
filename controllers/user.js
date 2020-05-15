@@ -36,3 +36,22 @@ exports.updateUser = (req, res) => {
   );
 };
 
+exports.getAllUserNames = (req,res) => {
+  User.find().exec((err, users) => {
+    if (err) {
+      return res.status(400).json({
+        error: "NO User found"
+      });
+    }
+
+    for(let itr=0;itr<users.length;itr++){
+      users[itr].salt = undefined;
+      users[itr].encry_password = undefined;
+      users[itr].role = undefined;
+      users[itr].createdAt = undefined
+      users[itr].updatedAt = undefined
+    }
+    
+    res.json(users);
+  });
+}
